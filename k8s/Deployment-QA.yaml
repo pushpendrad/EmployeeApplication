@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: employee-application
+  name: employee-application-qa
   labels:
-    name: employee-application
+    name: employee-application-qa
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: employee-application
+      name: employee-application-qa
   template:
     metadata:
       labels:
-        name: employee-application
+        name: employee-application-qa
     spec:
       containers:
-      - name: employee-application
+      - name: employee-application-qa
         image: cybnamespace/cybage-alm-ems-qa:tagname
         ports:
         - containerPort: 8080
