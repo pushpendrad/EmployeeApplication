@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: employee-application
+  name: employee-application-stg
   labels:
-    name: employee-application
+    name: employee-application-stg
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: employee-application
+      name: employee-application-stg
   template:
     metadata:
       labels:
-        name: employee-application
+        name: employee-application-stg
     spec:
       containers:
-      - name: employee-application
+      - name: employee-application-stg
         image: cybnamespace/cybage-alm-ems-stg:tagname
         ports:
         - containerPort: 8080
